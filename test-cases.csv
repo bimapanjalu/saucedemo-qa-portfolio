@@ -1,0 +1,13 @@
+﻿Test Case ID,Test Area,Title,Preconditions,Steps,Expected Result,Execution Status,Actual Result / Evidence
+SD-001,Authentication,Valid login,Valid demo user credentials are available,Enter valid username and password; select Login,Products page is displayed,NOT RUN,
+SD-002,Authentication,Invalid password,Login page is open,Enter valid username and incorrect password; select Login,A clear authentication error is displayed and login is not completed,NOT RUN,
+SD-003,Authentication,Locked-out account,Current demo credentials for a locked-out test account are confirmed,Enter the documented locked-out account credentials; select Login,Access is denied with an appropriate message,NOT RUN,
+SD-004,Catalog,Product list loads,User is logged in,Inspect the product list,"Product names, images, and prices are visible without a blocking error",NOT RUN,
+SD-005,Catalog,Open product details,User is on the product list,Open a product detail page; return to the list,Selected product details are displayed and navigation returns correctly,NOT RUN,
+SD-006,Cart,Add one product,User is on the product list,Add one product to the cart,Cart indicator updates and the selected product appears in the cart,NOT RUN,
+SD-007,Cart,Remove product,Cart contains one product,Remove the product from the cart,Product is removed and cart state updates accordingly,NOT RUN,
+SD-008,Cart,Continue shopping,Cart page is open,Select Continue Shopping,User returns to the product list and can continue browsing,NOT RUN,
+SD-009,Checkout,Required information validation,User is logged in and cart contains an item,Start checkout; leave a required field blank; continue,The form prevents progression and communicates the validation issue,NOT RUN,
+SD-010,Checkout,Order summary,User is logged in and cart contains an item,Complete required customer information and continue,Checkout overview shows the expected item and displayed totals,NOT RUN,
+SD-011,Checkout,Complete demo order,Checkout overview is displayed with a valid cart,Select Finish,A completion confirmation is displayed,NOT RUN,
+SD-012,Session / Navigation,Logout,User is logged in,Open menu and select Logout,User returns to the login page and protected pages are no longer directly accessible in the current session,NOT RUN,
